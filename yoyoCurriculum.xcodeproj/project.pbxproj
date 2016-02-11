@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		371F73B4C9E3A5B09032DFDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A14D5959CF4624CACB86A31 /* libPods.a */; };
+		50C47CB41C27F8070091E74E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CB31C27F8070091E74E /* main.m */; };
+		50C47CB71C27F8070091E74E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CB61C27F8070091E74E /* AppDelegate.m */; };
+		50C47CBD1C27F8070091E74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50C47CBB1C27F8070091E74E /* Main.storyboard */; };
+		50C47CBF1C27F8070091E74E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C47CBE1C27F8070091E74E /* Assets.xcassets */; };
+		50C47CC21C27F8070091E74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50C47CC01C27F8070091E74E /* LaunchScreen.storyboard */; };
+		50C47CD01C28E2960091E74E /* KYIndexTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CCF1C28E2960091E74E /* KYIndexTabBarViewController.m */; };
+		50C47CD31C28E3F40091E74E /* KYMonthCurriculumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CD21C28E3F40091E74E /* KYMonthCurriculumViewController.m */; };
+		50C47CD61C28E4180091E74E /* KYWeekCurriculumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CD51C28E4180091E74E /* KYWeekCurriculumViewController.m */; };
+		50C47CD91C28E42B0091E74E /* KYDayCurriculumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CD81C28E42B0091E74E /* KYDayCurriculumViewController.m */; };
+		50C47CDD1C292C250091E74E /* KYWeekCurriculumViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CDC1C292C250091E74E /* KYWeekCurriculumViewCell.m */; };
+		50C47CE01C2A87450091E74E /* KYDayTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CDF1C2A87450091E74E /* KYDayTimeTableViewCell.m */; };
+		50C47CE31C2B82C30091E74E /* KYDayCurriculumViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CE21C2B82C30091E74E /* KYDayCurriculumViewCell.m */; };
+		50C47CEA1C2BCD260091E74E /* UINavigationBar+KYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CE91C2BCD260091E74E /* UINavigationBar+KYAdd.m */; };
+		50C47CF01C2D19830091E74E /* KYCurriculumMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C47CEF1C2D19830091E74E /* KYCurriculumMapView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		50C47CAF1C27F8070091E74E /* yoyoCurriculum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yoyoCurriculum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C47CB31C27F8070091E74E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50C47CB51C27F8070091E74E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50C47CB61C27F8070091E74E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50C47CBC1C27F8070091E74E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50C47CBE1C27F8070091E74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50C47CC11C27F8070091E74E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50C47CC31C27F8070091E74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C47CCE1C28E2960091E74E /* KYIndexTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYIndexTabBarViewController.h; sourceTree = "<group>"; };
+		50C47CCF1C28E2960091E74E /* KYIndexTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYIndexTabBarViewController.m; sourceTree = "<group>"; };
+		50C47CD11C28E3F40091E74E /* KYMonthCurriculumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYMonthCurriculumViewController.h; sourceTree = "<group>"; };
+		50C47CD21C28E3F40091E74E /* KYMonthCurriculumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYMonthCurriculumViewController.m; sourceTree = "<group>"; };
+		50C47CD41C28E4180091E74E /* KYWeekCurriculumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYWeekCurriculumViewController.h; sourceTree = "<group>"; };
+		50C47CD51C28E4180091E74E /* KYWeekCurriculumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYWeekCurriculumViewController.m; sourceTree = "<group>"; };
+		50C47CD71C28E42B0091E74E /* KYDayCurriculumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYDayCurriculumViewController.h; sourceTree = "<group>"; };
+		50C47CD81C28E42B0091E74E /* KYDayCurriculumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYDayCurriculumViewController.m; sourceTree = "<group>"; };
+		50C47CDB1C292C250091E74E /* KYWeekCurriculumViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYWeekCurriculumViewCell.h; sourceTree = "<group>"; };
+		50C47CDC1C292C250091E74E /* KYWeekCurriculumViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYWeekCurriculumViewCell.m; sourceTree = "<group>"; };
+		50C47CDE1C2A87450091E74E /* KYDayTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYDayTimeTableViewCell.h; sourceTree = "<group>"; };
+		50C47CDF1C2A87450091E74E /* KYDayTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYDayTimeTableViewCell.m; sourceTree = "<group>"; };
+		50C47CE11C2B82C30091E74E /* KYDayCurriculumViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYDayCurriculumViewCell.h; sourceTree = "<group>"; };
+		50C47CE21C2B82C30091E74E /* KYDayCurriculumViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYDayCurriculumViewCell.m; sourceTree = "<group>"; };
+		50C47CE81C2BCD260091E74E /* UINavigationBar+KYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KYAdd.h"; sourceTree = "<group>"; };
+		50C47CE91C2BCD260091E74E /* UINavigationBar+KYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KYAdd.m"; sourceTree = "<group>"; };
+		50C47CEE1C2D19830091E74E /* KYCurriculumMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCurriculumMapView.h; sourceTree = "<group>"; };
+		50C47CEF1C2D19830091E74E /* KYCurriculumMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCurriculumMapView.m; sourceTree = "<group>"; };
+		5A14D5959CF4624CACB86A31 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9288E5E59B8ACC09341592 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C47C4746AE523E27CFAE7A01 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50C47CAC1C27F8070091E74E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371F73B4C9E3A5B09032DFDD /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50C47CA61C27F8070091E74E = {
+			isa = PBXGroup;
+			children = (
+				50C47CB11C27F8070091E74E /* yoyoCurriculum */,
+				50C47CB01C27F8070091E74E /* Products */,
+				66C9BC845FCDF4BCBF79570B /* Pods */,
+				81A2365702F27BC7613FF092 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		50C47CB01C27F8070091E74E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50C47CAF1C27F8070091E74E /* yoyoCurriculum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50C47CB11C27F8070091E74E /* yoyoCurriculum */ = {
+			isa = PBXGroup;
+			children = (
+				50C47CC91C28DF7A0091E74E /* Model */,
+				50C47CCA1C28DF7A0091E74E /* Tools */,
+				50C47CCB1C28DF7A0091E74E /* View */,
+				50C47CCC1C28DF7A0091E74E /* ViewController */,
+				50C47CB51C27F8070091E74E /* AppDelegate.h */,
+				50C47CB61C27F8070091E74E /* AppDelegate.m */,
+				50C47CBB1C27F8070091E74E /* Main.storyboard */,
+				50C47CBE1C27F8070091E74E /* Assets.xcassets */,
+				50C47CC01C27F8070091E74E /* LaunchScreen.storyboard */,
+				50C47CC31C27F8070091E74E /* Info.plist */,
+				50C47CB21C27F8070091E74E /* Supporting Files */,
+			);
+			path = yoyoCurriculum;
+			sourceTree = "<group>";
+		};
+		50C47CB21C27F8070091E74E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50C47CB31C27F8070091E74E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50C47CC91C28DF7A0091E74E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		50C47CCA1C28DF7A0091E74E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				50C47CE81C2BCD260091E74E /* UINavigationBar+KYAdd.h */,
+				50C47CE91C2BCD260091E74E /* UINavigationBar+KYAdd.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		50C47CCB1C28DF7A0091E74E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50C47CDA1C292B8F0091E74E /* TableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50C47CCC1C28DF7A0091E74E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50C47CCD1C28E1450091E74E /* Curriculum */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		50C47CCD1C28E1450091E74E /* Curriculum */ = {
+			isa = PBXGroup;
+			children = (
+				50C47CCE1C28E2960091E74E /* KYIndexTabBarViewController.h */,
+				50C47CCF1C28E2960091E74E /* KYIndexTabBarViewController.m */,
+				50C47CD11C28E3F40091E74E /* KYMonthCurriculumViewController.h */,
+				50C47CD21C28E3F40091E74E /* KYMonthCurriculumViewController.m */,
+				50C47CD41C28E4180091E74E /* KYWeekCurriculumViewController.h */,
+				50C47CD51C28E4180091E74E /* KYWeekCurriculumViewController.m */,
+				50C47CD71C28E42B0091E74E /* KYDayCurriculumViewController.h */,
+				50C47CD81C28E42B0091E74E /* KYDayCurriculumViewController.m */,
+			);
+			name = Curriculum;
+			sourceTree = "<group>";
+		};
+		50C47CDA1C292B8F0091E74E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				50C47CDB1C292C250091E74E /* KYWeekCurriculumViewCell.h */,
+				50C47CDC1C292C250091E74E /* KYWeekCurriculumViewCell.m */,
+				50C47CE11C2B82C30091E74E /* KYDayCurriculumViewCell.h */,
+				50C47CE21C2B82C30091E74E /* KYDayCurriculumViewCell.m */,
+				50C47CDE1C2A87450091E74E /* KYDayTimeTableViewCell.h */,
+				50C47CDF1C2A87450091E74E /* KYDayTimeTableViewCell.m */,
+				50C47CEE1C2D19830091E74E /* KYCurriculumMapView.h */,
+				50C47CEF1C2D19830091E74E /* KYCurriculumMapView.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		66C9BC845FCDF4BCBF79570B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C47C4746AE523E27CFAE7A01 /* Pods.debug.xcconfig */,
+				AB9288E5E59B8ACC09341592 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		81A2365702F27BC7613FF092 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A14D5959CF4624CACB86A31 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50C47CAE1C27F8070091E74E /* yoyoCurriculum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C47CC61C27F8070091E74E /* Build configuration list for PBXNativeTarget "yoyoCurriculum" */;
+			buildPhases = (
+				8339C98E0B26A9EDF7D74BC5 /* Check Pods Manifest.lock */,
+				50C47CAB1C27F8070091E74E /* Sources */,
+				50C47CAC1C27F8070091E74E /* Frameworks */,
+				50C47CAD1C27F8070091E74E /* Resources */,
+				02884FEA12EEED2D8E3D836E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yoyoCurriculum;
+			productName = yoyoCurriculum;
+			productReference = 50C47CAF1C27F8070091E74E /* yoyoCurriculum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50C47CA71C27F8070091E74E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = KangYang;
+				TargetAttributes = {
+					50C47CAE1C27F8070091E74E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 50C47CAA1C27F8070091E74E /* Build configuration list for PBXProject "yoyoCurriculum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50C47CA61C27F8070091E74E;
+			productRefGroup = 50C47CB01C27F8070091E74E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50C47CAE1C27F8070091E74E /* yoyoCurriculum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50C47CAD1C27F8070091E74E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C47CC21C27F8070091E74E /* LaunchScreen.storyboard in Resources */,
+				50C47CBF1C27F8070091E74E /* Assets.xcassets in Resources */,
+				50C47CBD1C27F8070091E74E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02884FEA12EEED2D8E3D836E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8339C98E0B26A9EDF7D74BC5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50C47CAB1C27F8070091E74E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C47CD91C28E42B0091E74E /* KYDayCurriculumViewController.m in Sources */,
+				50C47CEA1C2BCD260091E74E /* UINavigationBar+KYAdd.m in Sources */,
+				50C47CD31C28E3F40091E74E /* KYMonthCurriculumViewController.m in Sources */,
+				50C47CDD1C292C250091E74E /* KYWeekCurriculumViewCell.m in Sources */,
+				50C47CE31C2B82C30091E74E /* KYDayCurriculumViewCell.m in Sources */,
+				50C47CD01C28E2960091E74E /* KYIndexTabBarViewController.m in Sources */,
+				50C47CB71C27F8070091E74E /* AppDelegate.m in Sources */,
+				50C47CD61C28E4180091E74E /* KYWeekCurriculumViewController.m in Sources */,
+				50C47CF01C2D19830091E74E /* KYCurriculumMapView.m in Sources */,
+				50C47CB41C27F8070091E74E /* main.m in Sources */,
+				50C47CE01C2A87450091E74E /* KYDayTimeTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50C47CBB1C27F8070091E74E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50C47CBC1C27F8070091E74E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		50C47CC01C27F8070091E74E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50C47CC11C27F8070091E74E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50C47CC41C27F8070091E74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50C47CC51C27F8070091E74E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50C47CC71C27F8070091E74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C47C4746AE523E27CFAE7A01 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				INFOPLIST_FILE = yoyoCurriculum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kangyang.yoyoCurriculum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "97a37308-8398-47d3-b212-26b26d8d47f3";
+			};
+			name = Debug;
+		};
+		50C47CC81C27F8070091E74E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB9288E5E59B8ACC09341592 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				INFOPLIST_FILE = yoyoCurriculum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kangyang.yoyoCurriculum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "97a37308-8398-47d3-b212-26b26d8d47f3";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50C47CAA1C27F8070091E74E /* Build configuration list for PBXProject "yoyoCurriculum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C47CC41C27F8070091E74E /* Debug */,
+				50C47CC51C27F8070091E74E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C47CC61C27F8070091E74E /* Build configuration list for PBXNativeTarget "yoyoCurriculum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C47CC71C27F8070091E74E /* Debug */,
+				50C47CC81C27F8070091E74E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50C47CA71C27F8070091E74E /* Project object */;
+}

@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "f919248e-23d9-6341-9e8c-1e69f0472d2d",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "f919248e-23d9-6341-9e8c-1e69f0472d2d" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "f919248e-23d9-6341-9e8c-1e69f0472d2d" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "13BB3EDA-E021-4BED-8192-70089C5913EB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "f919248e-23d9-6341-9e8c-1e69f0472d2d" : "timetable\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "yoyoCurriculum",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "yoyoCurriculum\/yoyoCurriculum.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.99:8443\/svn\/timetable",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "f919248e-23d9-6341-9e8c-1e69f0472d2d"
+    }
+  ]
+}
