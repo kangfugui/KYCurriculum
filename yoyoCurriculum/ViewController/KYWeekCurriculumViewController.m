@@ -19,6 +19,7 @@
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) JTHorizontalCalendarView *calendarContentView;
 @property (strong, nonatomic) JTCalendarManager *calendarManager;
+@property (strong, nonatomic) NSMutableArray *dataSource;
 
 @end
 
@@ -32,6 +33,7 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.929 green:0.933 blue:0.941 alpha:1];
     [self _initCalendar];
     [self _initCurriculum];
+    [self _initTestData];
 }
 
 - (void)_initCalendar
@@ -77,32 +79,23 @@
 
 #pragma mark - CalendarManager delegate
 
-// Exemple of implementation of prepareDayView method
-// Used to customize the appearance of dayView
 - (void)calendar:(JTCalendarManager *)calendar prepareDayView:(JTCalendarDayView *)dayView
 {
-    // Today
-    if([_calendarManager.dateHelper date:[NSDate date] isTheSameDayThan:dayView.date]){
+    if ([_calendarManager.dateHelper date:[NSDate date] isTheSameDayThan:dayView.date]) {
         dayView.circleView.hidden = NO;
         dayView.circleView.backgroundColor = [UIColor colorWithRed:1 green:0.792 blue:0 alpha:1];
         dayView.dotView.backgroundColor = [UIColor whiteColor];
         dayView.textLabel.textColor = [UIColor blackColor];
-    }
-    // Selected date
-    else if(_dateSelected && [_calendarManager.dateHelper date:_dateSelected isTheSameDayThan:dayView.date]){
+    } else if (_dateSelected && [_calendarManager.dateHelper date:_dateSelected isTheSameDayThan:dayView.date]) {
         dayView.circleView.hidden = NO;
         dayView.circleView.backgroundColor = [UIColor redColor];
         dayView.dotView.backgroundColor = [UIColor whiteColor];
         dayView.textLabel.textColor = [UIColor blackColor];
-    }
-    // Other month
-    else if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
+    } else if (![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]) {
         dayView.circleView.hidden = YES;
         dayView.dotView.backgroundColor = [UIColor redColor];
         dayView.textLabel.textColor = [UIColor lightGrayColor];
-    }
-    // Another day of the current month
-    else{
+    } else {
         dayView.circleView.hidden = YES;
         dayView.dotView.backgroundColor = [UIColor redColor];
         dayView.textLabel.textColor = [UIColor blackColor];
@@ -115,7 +108,6 @@
 {
     _dateSelected = dayView.date;
     
-    // Animation for the circleView
     dayView.circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
     [UIView transitionWithView:dayView
                       duration:.3
@@ -123,13 +115,13 @@
                     animations:^{
                         dayView.circleView.transform = CGAffineTransformIdentity;
                         [_calendarManager reload];
-                    } completion:nil];
+                    }
+                    completion:nil];
     
-    if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
-        if([_calendarContentView.date compare:dayView.date] == NSOrderedAscending){
+    if (![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]) {
+        if ([_calendarContentView.date compare:dayView.date] == NSOrderedAscending) {
             [_calendarContentView loadNextPageWithAnimation];
-        }
-        else{
+        } else {
             [_calendarContentView loadPreviousPageWithAnimation];
         }
     }
@@ -156,20 +148,36 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 50;
+    return self.dataSource.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
-                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    KYWeekCurriculumViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"reuseIdentifer" forIndexPath:indexPath];
-    
-    return cell;
+    return [collectionView dequeueReusableCellWithReuseIdentifier:@"reuseIdentifer" forIndexPath:indexPath];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ((KYWeekCurriculumViewCell *)cell).scrollView.contentOffset = CGPointZero;
+    
+    NSDate *date = self.dataSource[indexPath.item];
+    _dateSelected = date;
+    [_calendarManager reload];
+    
+    NSInteger weekday = [_calendarManager.dateHelper.calendar component:NSCalendarUnitWeekday fromDate:date];
+    
+    if (![_calendarManager.dateHelper date:_calendarContentView.date isTheSameWeekThan:date]) {
+        if ([_calendarContentView.date compare:date] == NSOrderedAscending) {
+            if (weekday > 1) {
+                [_calendarContentView loadNextPageWithAnimation];
+            }
+        } else {
+            [_calendarContentView loadPreviousPageWithAnimation];
+        }
+    }
+    else if (weekday == 1) {
+        [_calendarContentView loadPreviousPageWithAnimation];
+    }
 }
 
 #pragma mark - private method
@@ -179,12 +187,20 @@
     return NO;
 }
 
+- (void)_initTestData
+{
+    self.dataSource = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 10; i++) {
+        NSDate *date = [[NSDate date] dateByAddingTimeInterval:(60 * 60 * 24 * i)];
+        [self.dataSource addObject:date];
+    }
+}
+
 #pragma mark - getters and setters
 
 - (UICollectionView *)collectionView
 {
-    if (!_collectionView)
-    {
+    if (!_collectionView) {
         CGRect rect = self.view.bounds;
         rect.origin.y = 64 + 85;
         rect.size.height -= (64 + 85 + 49);

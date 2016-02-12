@@ -18,6 +18,8 @@
 @property (strong, nonatomic) JTHorizontalCalendarView *calendarContentView;
 @property (strong, nonatomic) JTCalendarManager *calendarManager;
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray<__kindof NSArray *> *allCurriculum;
+@property (assign, nonatomic) NSInteger currentDayIndex;
 
 @end
 
@@ -34,6 +36,7 @@
     
     [self _initCalendar];
     [self _initTableView];
+    [self _initTestData];
 }
 
 - (void)_initCalendar
@@ -79,7 +82,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.allCurriculum[self.currentDayIndex].count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -94,7 +97,7 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.font = [UIFont systemFontOfSize:12];
-    cell.textLabel.text = @"9:00 高等数学 （A3教学楼108号教室）";
+    cell.textLabel.text = self.allCurriculum[self.currentDayIndex][indexPath.row];
     cell.backgroundColor = self.view.backgroundColor;
     
     return cell;
@@ -102,32 +105,23 @@
 
 #pragma mark - CalendarManager delegate
 
-// Exemple of implementation of prepareDayView method
-// Used to customize the appearance of dayView
 - (void)calendar:(JTCalendarManager *)calendar prepareDayView:(JTCalendarDayView *)dayView
 {
-    // Today
-    if([_calendarManager.dateHelper date:[NSDate date] isTheSameDayThan:dayView.date]){
+    if ([_calendarManager.dateHelper date:[NSDate date] isTheSameDayThan:dayView.date]) {
         dayView.circleView.hidden = NO;
         dayView.circleView.backgroundColor = [UIColor colorWithRed:1 green:0.792 blue:0 alpha:1];
         dayView.dotView.backgroundColor = [UIColor whiteColor];
         dayView.textLabel.textColor = [UIColor blackColor];
-    }
-    // Selected date
-    else if(_dateSelected && [_calendarManager.dateHelper date:_dateSelected isTheSameDayThan:dayView.date]){
+    } else if(_dateSelected && [_calendarManager.dateHelper date:_dateSelected isTheSameDayThan:dayView.date]) {
         dayView.circleView.hidden = NO;
         dayView.circleView.backgroundColor = [UIColor redColor];
         dayView.dotView.backgroundColor = [UIColor whiteColor];
         dayView.textLabel.textColor = [UIColor blackColor];
-    }
-    // Other month
-    else if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
+    } else if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]) {
         dayView.circleView.hidden = YES;
         dayView.dotView.backgroundColor = [UIColor redColor];
         dayView.textLabel.textColor = [UIColor lightGrayColor];
-    }
-    // Another day of the current month
-    else{
+    } else {
         dayView.circleView.hidden = YES;
         dayView.dotView.backgroundColor = [UIColor redColor];
         dayView.textLabel.textColor = [UIColor blackColor];
@@ -140,7 +134,6 @@
 {
     _dateSelected = dayView.date;
     
-    // Animation for the circleView
     dayView.circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
     [UIView transitionWithView:dayView
                       duration:.3
@@ -148,24 +141,24 @@
                     animations:^{
                         dayView.circleView.transform = CGAffineTransformIdentity;
                         [_calendarManager reload];
-                    } completion:nil];
+                    }
+                    completion:nil];
     
-    
-    // Load the previous or next page if touch a day from another month
-    
-    if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
-        if([_calendarContentView.date compare:dayView.date] == NSOrderedAscending){
+    if (![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]) {
+        if ([_calendarContentView.date compare:dayView.date] == NSOrderedAscending) {
             [_calendarContentView loadNextPageWithAnimation];
-        }
-        else{
+        } else {
             [_calendarContentView loadPreviousPageWithAnimation];
         }
     }
+    
+    self.currentDayIndex += 1;
+    if (self.currentDayIndex >= 5) self.currentDayIndex = 0;
+    [self.tableView reloadData];
 }
 
 #pragma mark - CalendarManager delegate - Page mangement
 
-// Used to limit the date for the calendar, optional
 - (BOOL)calendar:(JTCalendarManager *)calendar canDisplayPageWithDate:(NSDate *)date
 {
     return YES;
@@ -186,6 +179,26 @@
 - (BOOL)haveEventForDay:(NSDate *)date
 {
     return NO;
+}
+
+- (void)_initTestData
+{
+    self.allCurriculum = [[NSMutableArray alloc] init];
+    NSArray *subject = @[@"语文 (A3教学楼108教室)",
+                         @"数学 (A11教学楼108教室)",
+                         @"物理 (A5教学楼442教室)",
+                         @"化学 (B20教学楼337教室)",
+                         @"英语 (C3教学楼3305教室)"];
+    
+    for (int i = 0; i < 5; i++) {
+        
+        NSMutableArray *temp = [[NSMutableArray alloc] init];
+        [self.allCurriculum addObject:temp];
+        
+        for (int j = 0; j < 12; j++) {
+            [temp addObject:[NSString stringWithFormat:@"%d:00 %@",(j+8),subject[i]]];
+        }
+    }
 }
 
 @end
